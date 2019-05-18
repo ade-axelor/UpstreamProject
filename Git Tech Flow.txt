@@ -1,0 +1,74 @@
+Git Account Create 
+Connect Git Local to Remote using SSH
+Create project -> clone project git clone ssh path of repository -> edit file
+see diffrence git diff  ->  git add ./*
+
+git commit -m 'first'
+
+git push origin master
+
+now pull updated data from github remote to local 
+
+git pull origin master ( fetch updated data + merge it)
+
+or 
+
+git fetch ( fetch updated data )
+
+git merge origin/master ( merge into exisiing data )
+
+Now Branch creation :
+
+git branch next-123  - create branch
+
+git checkout next-123 - switch branch
+
+	or
+
+git checkout -b next-555
+
+ Stash :
+
+1) when you want to switch branch.
+
+git stash ( system message )
+
+git stash list
+
+git stash pop ( remove from list )
+
+2) add updated data to your file and then put your current data above the data.
+
+git stash save 'message' ( custome message )
+
+git stash list
+
+git stash apply stash id  (  stash did not delete )
+
+
+3) suppose if you get ticket get back for changes then also you have to first reset last commit then put it in stash and 
+then download updated code ( commits ) then put stash code back.
+
+
+
+== Revert and Reset ===  Revert is not use for one commit back because it generate one more commit in commit history.
+
+if you want change last commit then use it 
+
+git reset HEAD~1
+
+if file is edit but not commited then you want to get back privious state of file then use 
+
+git checkout . or filename
+
+
+if file is updated but not added .
+
+then you can take changes back .
+
+git checkout Test
+
+you can delete file 
+
+rm Test
+git checkout Test
